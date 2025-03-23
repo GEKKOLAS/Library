@@ -1,0 +1,62 @@
+[
+    {
+        
+        "Name": "Gabriel Garcia Marquez",
+        "Birthdate": "1927-03-06"
+        
+    },
+    {
+        
+        "Name": "Jane Austen",
+        "Birthdate": "1775-12-16"
+        
+    },
+    {
+        
+        "Name": "Mark Twain",
+        "Birthdate": "1835-11-30"
+        
+    },
+    {
+        
+        "Name": "Leo Tolstoy",
+        "Birthdate": "1828-09-09"
+       
+    },
+    {
+        
+        "Name": "George Orwell",
+        "Birthdate": "1903-06-25"
+       
+    },
+    {
+        
+        "Name": "J.K. Rowling",
+        "Birthdate": "1965-07-31"
+       
+    },
+    {
+        
+        "Name": "Ernest Hemingway",
+        "Birthdate": "1899-07-21"
+        
+    },
+    {
+        
+        "Name": "F. Scott Fitzgerald",
+        "Birthdate": "1896-09-24"
+        
+    },
+    {
+        
+        "Name": "Harper Lee",
+        "Birthdate": "1926-04-28"
+        
+    },
+    {
+        
+        "Name": "J.R.R. Tolkien",
+        "Birthdate": "1892-01-03"
+        
+    }
+]
