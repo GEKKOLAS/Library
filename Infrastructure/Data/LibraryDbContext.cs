@@ -21,7 +21,16 @@ namespace Infrastructure.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Book>().HasIndex(b => b.Title).IsUnique();
+
+             modelBuilder.Entity<Author>()
+                .HasMany(a => a.Books)
+                .WithOne(b => b.Author)
+                .HasForeignKey(b => b.AuthorID)
+                .HasConstraintName("FK_Books_Authors_AuthorID");
+
+            
         }
+       
     }
 }
 

@@ -24,33 +24,30 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Core.Models.Author", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("AuthorID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuthorID"));
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("AuthorID");
 
                     b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("Core.Models.Book", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("AuthorId")
+                    b.Property<int>("AuthorID")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -60,9 +57,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("URLImagen")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
-                    b.HasIndex("AuthorId");
+                    b.HasIndex("AuthorID");
 
                     b.HasIndex("Title")
                         .IsUnique();
@@ -110,7 +107,7 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BooksId")
+                    b.Property<int>("BooksID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
@@ -121,7 +118,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BooksId");
+                    b.HasIndex("BooksID");
 
                     b.HasIndex("UserId");
 
@@ -131,8 +128,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Core.Models.Book", b =>
                 {
                     b.HasOne("Core.Models.Author", "Author")
-                        .WithMany()
-                        .HasForeignKey("AuthorId")
+                        .WithMany("Books")
+                        .HasForeignKey("AuthorID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -143,7 +140,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Core.Models.Book", "Books")
                         .WithMany()
-                        .HasForeignKey("BooksId")
+                        .HasForeignKey("BooksID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -156,6 +153,11 @@ namespace Infrastructure.Migrations
                     b.Navigation("Books");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Core.Models.Author", b =>
+                {
+                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

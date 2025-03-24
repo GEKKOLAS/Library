@@ -1,17 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.Models
 {
     public class Author
     {
-        public int Id  { get; set; } 
+        [Key]
+        public int AuthorID  { get; set; } 
 
         [Required(ErrorMessage = "This field is Required")]
         public string Name { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd hh:mm tt}")]
-        public DateTime BirthDate { get; set; }
+         public ICollection<Book> Books { get; set; } = new List<Book>();
 
     }
 }

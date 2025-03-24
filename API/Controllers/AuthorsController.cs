@@ -66,7 +66,7 @@ namespace API.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, Author author)
         {
-            if (id != author.Id)
+            if (id != author.AuthorID)
             {
                 return NotFound();
             }
@@ -96,7 +96,7 @@ namespace API.Controllers
                 return NotFound();
             }
 
-            var author = await _context.Authors.FirstOrDefaultAsync(m => m.Id == id);
+            var author = await _context.Authors.FirstOrDefaultAsync(m => m.AuthorID == id);
             if (author == null)
             {
                 return NotFound();

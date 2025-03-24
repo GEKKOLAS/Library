@@ -19,7 +19,7 @@ public class ListService : IListService
     {
         List<SelectListItem> list = await _context.Authors.Select(a => new SelectListItem
         {
-            Value = a.Id.ToString(),
+            Value = a.AuthorID.ToString(),
             Text = a.Name
         })
         .OrderBy(a => a.Text).ToListAsync();
@@ -36,7 +36,7 @@ public class ListService : IListService
     {
         List<SelectListItem> list = await _context.Authors.Select(a => new SelectListItem
         {
-            Value = a.Id.ToString(),
+            Value = a.AuthorID.ToString(),
             Text = a.Name
         })
         .OrderBy(a => a.Text).ToListAsync();

@@ -1,0 +1,122 @@
+[
+    {
+        "Title": "One Hundred Years of Solitude",
+        "PublicationYear": 1967,
+        "URLImagen": "https://pin.it/3skrZ0sjM",
+        "AuthorID": 1
+    },
+    {
+        "Title": "Love in the Time of Cholera",
+        "PublicationYear": 1985,
+        "URLImagen": "https://pin.it/3vOJllZeI",
+        "AuthorID": 1
+    },
+    {
+        "Title": "Pride and Prejudice",
+        "PublicationYear": 1813,
+        "URLImagen": "https://pin.it/bQZcn8JqA",
+        "AuthorID": 2
+    },
+    {
+        "Title": "Sense and Sensibility",
+        "PublicationYear": 1811,
+        "URLImagen": "https://pin.it/1TYD8FzZP",
+        "AuthorID": 2
+    },
+    {
+        "Title": "The Adventures of Tom Sawyer",
+        "PublicationYear": 1876,
+        "URLImagen": "https://pin.it/27FPlYdIT",
+        "AuthorID": 3
+    },
+    {
+        "Title": "Adventures of Huckleberry Finn",
+        "PublicationYear": 1884,
+        "URLImagen": "https://pin.it/3Na6MpLub",
+        "AuthorID": 3
+    },
+    {
+        "Title": "War and Peace",
+        "PublicationYear": 1869,
+        "URLImagen": "https://pin.it/7IfdihFeg",
+        "AuthorID": 4
+    },
+    {
+        "Title": "Anna Karenina",
+        "PublicationYear": 1877,
+        "URLImagen": "https://pin.it/3vDi9roUX",
+        "AuthorID": 4
+    },
+    {
+        "Title": "1984",
+        "PublicationYear": 1949,
+        "URLImagen": "https://pin.it/1oTW92VgA",
+        "AuthorID": 5
+    },
+    {
+        "Title": "Animal Farm",
+        "PublicationYear": 1945,
+        "URLImagen": "url_to_image_10",
+        "AuthorID": 5
+    },
+    {
+        "Title": "Harry Potter and the Sorcerer's Stone",
+        "PublicationYear": 1997,
+        "URLImagen": "https://pin.it/1ZunE8wyr",
+        "AuthorID": 6
+    },
+    {
+        "Title": "Harry Potter and the Chamber of Secrets",
+        "PublicationYear": 1998,
+        "URLImagen": "https://pin.it/5GzWcnaco",
+        "AuthorID": 6
+    },
+    {
+        "Title": "The Old Man and the Sea",
+        "PublicationYear": 1952,
+        "URLImagen": "https://pin.it/6UNZElMIx",
+        "AuthorID": 7
+    },
+    {
+        "Title": "A Farewell to Arms",
+        "PublicationYear": 1929,
+        "URLImagen": "https://pin.it/3ybhddWQw",
+        "AuthorID": 7
+    },
+    {
+        "Title": "The Great Gatsby",
+        "PublicationYear": 1925,
+        "URLImagen": "https://pin.it/1G01i3h39",
+        "AuthorID": 8
+    },
+    {
+        "Title": "Tender Is the Night",
+        "PublicationYear": 1934,
+        "URLImagen": "https://pin.it/5j239bzFu",
+        "AuthorID": 8
+    },
+    {
+        "Title": "To Kill a Mockingbird",
+        "PublicationYear": 1960,
+        "URLImagen": "https://pin.it/1I1s9SjXz",
+        "AuthorID": 9
+    },
+    {
+        "Title": "Go Set a Watchman",
+        "PublicationYear": 2015,
+        "URLImagen": "https://pin.it/3IboAPXMa",
+        "AuthorID": 9
+    },
+    {
+        "Title": "The Hobbit",
+        "PublicationYear": 1937,
+        "URLImagen": "https://pin.it/5glkDLBCk",
+        "AuthorID": 10
+    },
+    {
+        "Title": "The Lord of the Rings",
+        "PublicationYear": 1954,
+        "URLImagen": "https://pin.it/7taAQMQGI",
+        "AuthorID": 10
+    }
+]

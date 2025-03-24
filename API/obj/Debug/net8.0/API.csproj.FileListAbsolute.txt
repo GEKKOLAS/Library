@@ -165,3 +165,4 @@ C:\Users\nikol\code\Library\API\obj\Debug\net8.0\API.RazorAssemblyInfo.cache
 C:\Users\nikol\code\Library\API\obj\Debug\net8.0\API.RazorAssemblyInfo.cs
 C:\Users\nikol\code\Library\API\bin\Debug\net8.0\API.staticwebassets.runtime.json
 C:\Users\nikol\code\Library\API\bin\Debug\net8.0\libman.json
+C:\Users\nikol\code\Library\API\obj\Debug\net8.0\API.sourcelink.json

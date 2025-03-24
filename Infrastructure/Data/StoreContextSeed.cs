@@ -16,6 +16,16 @@ public class StoreContextSeed
             context.Authors.AddRange(authors);
             await context.SaveChangesAsync();
         }
+
+        if (!context.Books.Any())
+        {
+            var booksData = File.ReadAllText("../Infrastructure/Data/SeedData/books.json");
+            var books = JsonSerializer.Deserialize<List<Book>>(booksData);
+            if (books == null) return;
+            context.Books.AddRange(books);
+            
+            await context.SaveChangesAsync();
+        }
     }
     
     

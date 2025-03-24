@@ -1,0 +1,72 @@
+﻿@model API.ViewModel.BookListViewModel
+
+@{
+    ViewData["Title"] = "book";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta Title="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Button trigger modal -->
+        <div class="container">
+            <a href="/authors" class="btn btn-primary bg-success">Add new Author</a>
+        </div>
+        <button type="button" class="btn btn-primary bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add new books
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add your Favorite Books</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputName" class="form-label">Title</label>
+                                <input type="name" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="nameHelp">
+                            </div>
+                            <select class="form-select" aria-label="Default select example" id="authorSelect" name="authorId">
+                                <option selected>Select an author</option>
+                                @foreach (var author in Model.Authors)
+                                {
+                                    <option value="@author.AuthorID">@author.Name</option>
+                                }
+                            </select>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        @foreach (var book in Model.Books)
+        {
+            <div class="card justify-content-center d-inline-flex bg-light text-bg-primary" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <img src="@book.URLImagen" class="" alt="...">
+                    <h5 class="card-title">@book.Title</h5>
+                    <button type="button" class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+
+</html>
