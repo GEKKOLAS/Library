@@ -31,8 +31,10 @@ Library es una aplicación diseñada para gestionar y explorar colecciones de li
 ## Uso 🖥️
 
 1. Accede a la aplicación en `http://localhost:5010`.
-2. Explora los libros disponibles.
-3. Añade nuevos libros y autores utilizando el panel de administración.
+![pagina--1--](https://github.com/user-attachments/assets/28298ce3-cf0e-4388-a016-84e837327651)
+
+3. Explora los libros disponibles.
+4. Añade nuevos libros y autores utilizando el panel de administración.
 
 ## Tecnología 🔧
 
