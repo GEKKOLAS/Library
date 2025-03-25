@@ -19,13 +19,13 @@ Library es una aplicación diseñada para gestionar y explorar colecciones de li
     ```bash or terminal
     cd Library
     ```
-3. Instala las dependencias:
+3. Instala las dependencias: Docker para establecer la imagen de mssql server y asegurarse de que este corriendo en docker desktop
     ```bash or terminal
-    dotnet restore
+    docker compose up -d    
     ```
 4. Ejecuta la aplicación:
     ```bash or terminal
-    dotnet run
+    dotnet run or dotnet watch
     ```
 
 ## Uso 🖥️
