@@ -39,7 +39,7 @@ namespace API.Controllers
                     _context.Add(author);
                     await _context.SaveChangesAsync();
                     TempData["AlertMessage"] = "Author created successfully";
-                    return RedirectToAction(nameof(List));
+                    return RedirectToAction(nameof(Index));
                 }
                 catch
                 {

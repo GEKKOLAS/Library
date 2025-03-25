@@ -17,10 +17,11 @@
         <!-- Button trigger modal -->
         <div class="container">
             <a href="/authors" class="btn btn-primary bg-success">Add new Author</a>
-        </div>
-        <button type="button" class="btn btn-primary bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Add new books
         </button>
+        </div>
+        
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,30 +32,37 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form class="was-validated" asp-action="Create" method="post" role="form">
                             <div class="mb-3">
-                                <label for="exampleInputName" class="form-label">Title</label>
-                                <input type="name" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="nameHelp">
+                                <label asp-for="Books" class="form-label">Title</label>
+                                <input asp-for="Title" type="title" class="form-control"  placeholder="Title"
+                                    required>
+                                    <div class="invalid-feedback">
+                                        Enter the Title
+                                    </div>
                             </div>
-                            <select class="form-select" aria-label="Default select example" id="authorSelect" name="authorId">
+                            <select class="form-select" required aria-label="select author" type="author" id="authorSelect" name="authorId">
                                 <option selected>Select an author</option>
                                 @foreach (var author in Model.Authors)
                                 {
                                     <option value="@author.AuthorID">@author.Name</option>
+                                    <div class="invalid-feedback">Select an Author from this list </div>
                                 }
                             </select>
+                            
+                            <div class="mt-2">
+                                <div class="col-m-offset-2 col-m-offset-2 md-5">
+                                    <input type="submit" class="btn btn-primary" value="Save Book"/>
+                                </div>
+                            </div>
+                            
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="container mt-5">
         @foreach (var book in Model.Books)
         {

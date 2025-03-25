@@ -8,7 +8,7 @@ namespace Core.Models
         public int ID { get; set; }
 
         [Required(ErrorMessage = "the field 0 is required")]
-        public required string Title { get; set; }
+        public string Title { get; set; }
 
         [ForeignKey("AuthorID")]
         public Author? Author { get; set; }

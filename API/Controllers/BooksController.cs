@@ -31,37 +31,26 @@ namespace API.Controllers
             return View(bookListViewModel);
         }
 
-        public async Task<IActionResult> Create()
-        {
-            var authors = await _context.Authors.ToListAsync();
-            var book = new Book
-            {
-                Title = "Default Title",
-                Author = authors.FirstOrDefault()
-            };
-            return View(book);
-        }
 
         [HttpPost]
         public async Task<IActionResult> Create(Book book)
         {
+
             if (ModelState.IsValid)
             {
-                try
-                {
-                    await _context.Books.AddAsync(book);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("List");
-                }
-                catch (Exception ex)
-                {
-                    ModelState.AddModelError("", ex.Message);
-                }
+
+                _context.Books.Add(book);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
-            var authors = await _context.Authors.ToListAsync();
-            book.Author = authors.FirstOrDefault();
+
+            
+            var authorsList = await _listService.GetListAuthors();
+            var selectedAuthor = authorsList.FirstOrDefault();
+            book.Author = _context.Authors.FirstOrDefault();
             return View(book);
         }
+
 
         public async Task<IActionResult> Index()
         {
