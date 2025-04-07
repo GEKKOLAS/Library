@@ -27,6 +27,7 @@ Library es una aplicación diseñada para gestionar y explorar colecciones de li
     ```
 4. Ejecuta la aplicación:
     ```bash or terminal
+    cd API
     dotnet run or dotnet watch
     ```
 
